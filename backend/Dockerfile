@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:14-alpine
 
 WORKDIR /usr/src/app
 
@@ -9,5 +9,3 @@ RUN npm install
 COPY . .
 
 EXPOSE 8001
-
-CMD ["node", "server.js"]
