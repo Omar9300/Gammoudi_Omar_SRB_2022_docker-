@@ -1,11 +1,13 @@
-FROM alpine:latest
+FROM node:10-alpine
 
 WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN apk update
+COPY . .
 
 RUN npm install
 
 EXPOSE 8001
+
+CMD ["node", "server.js"]
