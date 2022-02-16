@@ -23,11 +23,9 @@ services:
     volumes: 
       - mongodb_data:/data/db
     environment: 
-      MONGODB_INITDB_ROOT_USERNAME: username
-      MONGODB_INITDB_ROOT_PASSWORD: password
-    # uncomment following lines to access db locally
-    # ports:
-    #   - 27017:27017
+      MONGODB_INITDB_ROOT_USERNAME: omar
+      MONGODB_INITDB_ROOT_PASSWORD: admin
+    
     networks: 
      - back
 
