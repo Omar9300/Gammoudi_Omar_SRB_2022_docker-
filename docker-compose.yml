@@ -7,7 +7,7 @@ services:
     depends_on:
       - api
     ports:
-      - "8000:80"
+      - "8000:8000"
     networks:
       - network-backend
   apirest:
@@ -16,7 +16,7 @@ services:
     depends_on:
       - mongodb
     ports:
-      - "8080:80"
+      - "8080:8080"
     networks: 
      - network-backend
   
