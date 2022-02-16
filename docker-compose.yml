@@ -18,7 +18,7 @@ services:
     ports:
       - "8080:80"
     networks: 
-     - back
+     - network-backend
   
   mongoDB:
     image: mongo
@@ -33,10 +33,10 @@ services:
       - 8093:80
     
     networks: 
-     - back
+     - network-backend
 
-networks:
-  back:
+ networks:
+  network-backend
 
 volumes: 
   mongodb:
