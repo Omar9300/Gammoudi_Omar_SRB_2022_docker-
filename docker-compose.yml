@@ -9,7 +9,7 @@ services:
     ports:
       - "8000:80"
     networks:
-      - back
+      - network-backend
   apirest:
     build: ./backend
     #Communique avec mango
