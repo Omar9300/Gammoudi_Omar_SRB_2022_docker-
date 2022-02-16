@@ -9,7 +9,7 @@ services:
     ports:
       - "8000:8000"
     networks:
-      - network-backend
+      - back
   apirest:
     build: ./backend
     #Communique avec mango
@@ -18,7 +18,7 @@ services:
     ports:
       - "8080:8080"
     networks: 
-     - network-backend
+     - back
   
   mongoDB:
     image: mongo
@@ -30,10 +30,10 @@ services:
       MONGODB_INITDB_ROOT_PASSWORD: password
     
     networks: 
-     - network-backend
+     - back
      
 networks:
-  network-backend
+  back
 
 volumes: 
   mongodb:
