@@ -21,7 +21,7 @@ services:
     image: mongo
     restart: always
     volumes: 
-      - mongodb_data:/data/db
+      - mongo:/data/db
     environment: 
       MONGODB_INITDB_ROOT_USERNAME: omar
       MONGODB_INITDB_ROOT_PASSWORD: admin
@@ -33,4 +33,4 @@ networks:
   back:
 
 volumes: 
-  mongodb_data:
+  mongo:
